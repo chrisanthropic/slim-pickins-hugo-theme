@@ -1,0 +1,13 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "chrisanthropic"
+theme = "slim-pickins"
+Paginate = 10
+disqusShortname = "xxxx"
+
+[params]
+  twitterName = ""
+  githubName = ""
+  stackOverflowId = "#######"
+  description = "Demo site for a hugo theme"
+  google_analytics = "UA-xxxxxx-xx"
