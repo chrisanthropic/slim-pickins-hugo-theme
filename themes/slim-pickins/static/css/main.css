@@ -1,7 +1,8 @@
 * {box-sizing: border-box;}
 
     .wrapper {
-        max-width: 1024px;
+        max-width: 100%;
+        min-height: 98vh;
         margin: 0 auto;
         font: 1.2em Helvetica, arial, sans-serif;
     }
