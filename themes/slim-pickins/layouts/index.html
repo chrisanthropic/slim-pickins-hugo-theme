@@ -1,40 +1,17 @@
-{{ partial "header.html" . }}
+{{ partial "head.html" . }}
 
-<div id="layout" class="pure-g">
-    {{ partial "sidebar.html" . }}
+<div class="wrapper">
+        {{ partial "header.html" . }}
+        {{ partial "vertical_navigation.html" . }}
 
-    <div class="content pure-u-1 pure-u-md-3-4">
-        <div>
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                {{ range .Paginator.Pages }}
-                <h1 class="content-subhead">{{ .Date.Format "Jan 02 2006" }}</h1>
-                <section class="post">
-                    <header class="post-header">
+        <article class="content">
+            <h1>Main article area</h1>
+            <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+        </article>
 
-                        <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
-
-                        <p class="post-meta">
-                            {{ with .Params.author }}
-                                By <strong class="post-author">{{ . }}</strong>
-                            {{ end }}
-                            {{ if isset .Params "categories" }}
-                                {{ $baseUrl := .Site.BaseURL }}
-                                {{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
-                            {{ end }}
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        {{ .Content }}
-                    </div>
-                </section>
-                {{ end }}
-            </div>
-            {{ partial "pagination.html" . }}
-            {{ partial "footer.html" . }}
-        </div>
-    </div>
+        {{ partial "recent_posts.html" . }}
+        {{ partial "ad.html" . }}
+        {{ partial "footer.html" . }}
 </div>
 
 </body>
