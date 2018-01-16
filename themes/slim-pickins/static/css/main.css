@@ -31,9 +31,6 @@
 .side {
   grid-area: sidebar;
 }
-.ad {
-  grid-area: ad;
-}
 .main-footer {
   grid-area: footer;
 }
@@ -45,7 +42,6 @@
     "nav"
     "content"
     "sidebar"
-    "ad"
     "footer";
 }
 @media (min-width: 500px) {
@@ -55,7 +51,7 @@
       "header  header"
       "nav     nav"
       "sidebar content"
-      "ad      footer";
+      "footer      footer";
   }
   nav ul {
     display: flex;
@@ -68,7 +64,6 @@
     grid-template-areas: 
       "header header  header"
       "nav    content sidebar"
-      "nav    content ad"
       "footer footer  footer"
    }
    nav ul {
