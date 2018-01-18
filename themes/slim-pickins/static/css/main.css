@@ -1,72 +1,48 @@
-* {box-sizing: border-box;}
+/* Define our named Grid Areas */
+header {
+  grid-area: hd;
+  background-color: #8ca0ff;
+}
+nav {
+  grid-area: hnav;
+  background-color: #e08cff;
+}
+main {
+  grid-area: main;
+  background-color: #ffa08c;
+}
+aside {
+  grid-area: sd;
+  background-color: #8cffa0;
+}
+footer {
+  grid-area: ft;
+  background-color: #ffec99;
+}
 
-    .wrapper {
-        max-width: 100%;
-        min-height: 98vh;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-.main-head {
-  grid-area: header;
-}
-.content {
-  grid-area: content;
-}
-.main-nav {
-  grid-area: nav;
-}
-.side {
-  grid-area: sidebar;
-}
-.main-footer {
-  grid-area: footer;
-}
+/* Grid for Phones / Tablets / devices up to 700px */
 .wrapper {
   display: grid;
-  grid-gap: 20px;
+  width: 100%;
+  height: 98vh;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-template-areas: 
-    "header"
-    "nav"
-    "content"
-    "sidebar"
-    "footer";
+    "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+    "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
+    "main main main main main main main main main main main main main main main main"
+    "sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd"
+    "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
 }
-@media (min-width: 500px) {
-  .wrapper {
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
-      "header  header"
-      "nav     nav"
-      "sidebar content"
-      "footer      footer";
-  }
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-  }
-}
+
+/* Grid for Computers / devices larger than 700px */
 @media (min-width: 700px) {
   .wrapper {
-    grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: 
-      "header header  header"
-      "nav    content sidebar"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+      "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
+      ".    .    .    main main main main main main main sd   sd   sd   .    .    ."
+      "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+  }
+
 }
