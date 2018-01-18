@@ -27,6 +27,10 @@ footer {
   height: 98vh;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, 1fr);
+}
+
+/* Grid template for root / homepage */
+#index {
   grid-template-areas: 
     "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
     "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
@@ -37,7 +41,7 @@ footer {
 
 /* Grid for Computers / devices larger than 1280px */
 @media (min-width: 1280px) {
-  .wrapper {
+  #index {
     grid-template-areas: 
       "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
       "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
