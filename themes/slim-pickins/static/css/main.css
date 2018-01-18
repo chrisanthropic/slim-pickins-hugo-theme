@@ -20,7 +20,7 @@ footer {
   background-color: #ffec99;
 }
 
-/* Grid for Phones / Tablets / devices up to 700px */
+/* Grid for Phones / devices up to 700px */
 .wrapper {
   display: grid;
   width: 100%;
@@ -35,8 +35,8 @@ footer {
     "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
 }
 
-/* Grid for Computers / devices larger than 700px */
-@media (min-width: 700px) {
+/* Grid for Computers / devices larger than 1280px */
+@media (min-width: 1280px) {
   .wrapper {
     grid-template-areas: 
       "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
