@@ -1,32 +1,43 @@
+/* Clearing */
+body {
+  margin: 0;
+}
+
 /* Define our named Grid Areas */
 header {
   grid-area: hd;
   background-color: #8ca0ff;
+  display: block;
 }
 nav {
   grid-area: hnav;
   background-color: #e08cff;
+  height: 44px;
 }
 main {
   grid-area: main;
   background-color: #ffa08c;
+  margin: 0 10px;
+  padding: 0 10px;
 }
 aside {
   grid-area: sd;
   background-color: #8cffa0;
+  margin: 0 10px;
+  padding: 0 10px;
 }
 footer {
   grid-area: ft;
   background-color: #ffec99;
 }
 
-/* Grid for Phones / devices up to 700px */
-.wrapper {
+/* Default grid / mobile-first */
+.grid {
   display: grid;
   width: 100%;
-  height: 98vh;
+  height: 100vh;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 0 44px;
 }
 
 /* Grid template for root / homepage */
@@ -39,14 +50,29 @@ footer {
     "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
 }
 
-/* Grid for Computers / devices larger than 1280px */
+/* Grid templates for Computers / devices larger than 1280px */
 @media (min-width: 1280px) {
+  .grid {
+      grid-template-rows: 300px 44px auto 54px;
+  }
   #index {
     grid-template-areas: 
       "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
       "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
-      ".    .    main main main main main main sd   sd   .    ."
+      ".    .    main main main main main sd   sd   sd   .    ."
       "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
   }
 
+}
+
+/* NavBar */
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+}
+
+nav ul li {
+ padding: 0 1.4em 0 0;
+ font-size: 0.9em;
 }
