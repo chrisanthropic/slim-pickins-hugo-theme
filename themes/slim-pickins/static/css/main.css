@@ -110,8 +110,6 @@ label {
   position: relative;
   overflow: hidden;
   background: #1abc9c;
-  -webkit-transition: opacity .55s;
-  -o-transition: opacity .55s;
   transition: opacity .55s;
 }
 
@@ -131,8 +129,15 @@ label {
   margin: 1em;
 }
 /* :checked */
-input:checked ~ .hnav-content {
+input:checked ~ div .hnav-content {
   opacity: 1;
+}
+
+input:checked ~ div {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1abc9c;
+  position: absolute;
 }
 
 /* Icon */
@@ -145,8 +150,6 @@ label::after {
   height: 3em;
   line-height: 3;
   text-align: center;
-  -webkit-transition: all .35s;
-  -o-transition: all .35s;
   transition: all .35s;
 }
 
@@ -194,13 +197,14 @@ input[type=radio]:checked + label::after {
   label::after {
     content: none;
   }
-  input:checked ~ .hnav-content {
+  input:checked ~ div {
     min-height: 0;
     max-height: 0;
     width: auto;
   }
   .hnav-content {
     overflow: visible;
+    opacity: 1;
   }
 
   .hnav-content ul {
