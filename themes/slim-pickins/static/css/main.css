@@ -1,4 +1,8 @@
 /* Clearing */
+html, body {
+  height: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -7,6 +11,11 @@ body {
   line-height: 1.5;
   color: #222;
   background: #fefefe;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 /* Base */
@@ -68,14 +77,14 @@ footer {
 
 /* Sidebar */
 aside ul li {
-  margin-bottom: 2em;
+  margin: 0 0 2em 1em;
+
 }
 
 /* Thanks to https://codepen.io/raubaca/pen/PZzpVe for the basis of the mobile navbar */
 
 /* Horizontal Navbar */
 .hnav {
-  position: relative;
   width: 100%;
   color: #fff;
 }
@@ -97,13 +106,25 @@ label {
 }
 
 .hnav-content {
-  max-height: 0;
-  min-height: 0;
+  opacity: 0;
+  position: relative;
   overflow: hidden;
   background: #1abc9c;
-  -webkit-transition: min-height .55s;
-  -o-transition: min-height .55s;
-  transition: min-height .55s;
+  -webkit-transition: opacity .55s;
+  -o-transition: opacity .55s;
+  transition: opacity .55s;
+}
+
+.hnav-content ul{
+  display: block;
+  list-style-type: none;
+}
+
+.hnav-content ul li{
+  font-size: 1em;
+  padding: .5em 0;
+  text-align: center;
+  border-bottom: 2px solid #16a085;
 }
 
 .hnav-content p {
@@ -111,8 +132,7 @@ label {
 }
 /* :checked */
 input:checked ~ .hnav-content {
-  min-height: calc(100vh - 100px);
-  width: 100vw;
+  opacity: 1;
 }
 
 /* Icon */
@@ -161,6 +181,10 @@ input[type=radio]:checked + label::after {
   nav {
     display: flex;
     justify-content: center;
+  }
+
+  nav div {
+    width: 65vw;
   }
 
   label {
