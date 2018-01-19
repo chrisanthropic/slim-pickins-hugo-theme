@@ -1,18 +1,10 @@
 <aside class="sidebar">
-{{ range .Paginator.Pages }}
-  <section>
-    <header>
-      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      <p>
-        {{ with .Params.author }}
-          By <strong class="post-author">{{ . }}</strong>
-        {{ end }}
-      </p>
-    </header>
-
-    <div>
-      {{ .Content }}
-    </div>
-  </section>
-{{ end }}
-</aside> 
+  <h2>Recent Posts</h2>
+  <ul>
+    {{ range .Paginator.Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</aside>
