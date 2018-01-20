@@ -145,6 +145,17 @@ label {
   border-bottom: 2px solid #16a085;
 }
 
+/* 
+  WTF is this?
+  it's to style the ul only when it follows the second case of .hnav-content on the page
+  it's a way to style this element without adding a new class to the markup
+  demo of how it works here: http://jsfiddle.net/netsi1964/wvwg5ywp/
+*/
+.hnav-content~.hnav-content ul {
+  display: flex;
+  justify-content: center;
+}
+
 .hnav-content p {
   margin: 1em;
 }
