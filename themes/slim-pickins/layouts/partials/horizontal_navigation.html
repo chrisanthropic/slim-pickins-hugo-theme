@@ -6,7 +6,7 @@
       <ul>
         {{ $currentPage := . }}
           {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+          <li {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active"{{ end }}><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
     </div>
