@@ -35,5 +35,5 @@ sectionPagesMenu = "main"
 [[menu.socials]]
   name = "RSS"
   identifier = "RSS"
-  url = ""
+  url = "/index.xml"
   weight = 3
