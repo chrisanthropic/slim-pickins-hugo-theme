@@ -17,17 +17,28 @@ body {
   background: #fefefe;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 /********
  * Base *
  ********/
 a {
-  color: #626262;
+  color: #f994db;
+  position: relative;
+  display: inline-block;
   text-decoration: none;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,29 +50,28 @@ h1, h2, h3, h4, h5, h6 {
  ***************/
 header {
   grid-area: hd;
-  background-color: #8ca0ff;
+  background-color: #f994db;
   display: flex;
   flex-direction: column;
 }
 nav {
   grid-area: hnav;
-  background-color: #1abc9c;
+  background-color: #0f0f0f;
+  color: #f994db;
 }
 main {
   grid-area: main;
-  background-color: #ffa08c;
   margin: 0 10px;
   padding: 0 10px;
 }
 aside {
   grid-area: sd;
-  background-color: #8cffa0;
   margin: 0 10px;
   padding: 0 10px;
 }
 footer {
   grid-area: ft;
-  background-color: #ffec99;
+  background-color: #0f0f0f;
 }
 
 /********
@@ -99,10 +109,6 @@ footer {
 /***********
  * Sidebar *
  ***********/ 
-aside ul li {
-  margin: 0 0 2em 1em;
-
-}
 
 /*********************
  * Horizontal Navbar *
@@ -120,7 +126,7 @@ label {
   position: relative;
   display: block;
   padding: 0 0 0 1em;
-  background: #16a085;
+  background: #0f0f0f;
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
@@ -130,20 +136,27 @@ label {
   opacity: 0;
   position: relative;
   overflow: hidden;
-  background: #1abc9c;
+  background: #0f0f0f;
   transition: opacity .55s;
 }
 
-.hnav-content ul{
+.hnav-content ul {
   display: block;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.hnav-content ul li{
+.hnav-content ul li {
   font-size: 1em;
   padding: .5em 0;
   text-align: center;
-  border-bottom: 2px solid #16a085;
+  border-bottom: 3px solid #f994db;
+}
+
+/* Disable the line that shows up under links if the link is part of the navigation menu */
+.hnav-content ul li a::after {
+  display: none;
 }
 
 /* 
@@ -169,8 +182,9 @@ input:checked ~ div .hnav-content {
 input:checked ~ div {
   min-height: calc(100vh - 55px);
   width: 100vw;
-  background-color: #1abc9c;
+  background-color: #0f0f0f;
   position: absolute;
+  z-index: 100;
 }
 
 /* Icon */
@@ -184,6 +198,7 @@ label::after {
   line-height: 3;
   text-align: center;
   transition: all .35s;
+  color: #f994db;
 }
 
 input[type=checkbox] + label::after {
@@ -227,7 +242,7 @@ input[type=radio]:checked + label::after {
   text-transform: none;
   font-size: 1.5em;
   line-height: 44px;
-  color: #2d2727;
+  color: #f994db;
   padding: 0 10px;
 
   /* Better Font Rendering =========== */
@@ -349,6 +364,7 @@ input[type=radio]:checked + label::after {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    border-bottom: 0;
   }
 
   /* 
