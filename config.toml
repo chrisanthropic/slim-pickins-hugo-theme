@@ -4,7 +4,6 @@ title = "chrisanthropic"
 theme = "slim-pickins"
 Paginate = 10
 disqusShortname = "xxxx"
-sectionPagesMenu = "main"
 
 
 [params]
