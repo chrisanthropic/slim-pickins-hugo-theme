@@ -4,6 +4,8 @@ title = "chrisanthropic"
 theme = "slim-pickins"
 Paginate = 10
 disqusShortname = "xxxx"
+sectionPagesMenu = "main"
+
 
 [params]
   twitterName = ""
@@ -11,3 +13,27 @@ disqusShortname = "xxxx"
   stackOverflowId = "#######"
   description = "Demo site for a hugo theme"
   google_analytics = "UA-xxxxxx-xx"
+
+[[menu.main]]
+  name = "Home"
+  identifier = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.socials]]
+  name = "Twitter"
+  identifier = "Twitter"
+  url = "https://www.twitter.com"
+  weight = 1
+
+[[menu.socials]]
+  name = "Github"
+  identifier = "Github"
+  url = "https://www.github.com"
+  weight = 2
+
+[[menu.socials]]
+  name = "RSS"
+  identifier = "RSS"
+  url = ""
+  weight = 3
