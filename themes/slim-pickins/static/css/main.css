@@ -84,11 +84,6 @@ aside ul li {
 /* Thanks to https://codepen.io/raubaca/pen/PZzpVe for the basis of the mobile navbar */
 
 /* Horizontal Navbar */
-.hnav {
-  width: 100%;
-  color: #fff;
-}
-
 input {
   position: absolute;
   opacity: 0;
@@ -134,7 +129,7 @@ input:checked ~ div .hnav-content {
 }
 
 input:checked ~ div {
-  height: 100vh;
+  min-height: calc(100vh - 55px);
   width: 100vw;
   background-color: #1abc9c;
   position: absolute;
@@ -205,6 +200,8 @@ input[type=radio]:checked + label::after {
   .hnav-content {
     overflow: visible;
     opacity: 1;
+    min-height: 0;
+    max-height: 0;
   }
 
   .hnav-content ul {
