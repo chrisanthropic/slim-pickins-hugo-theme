@@ -14,25 +14,25 @@ disqusShortname = "xxxx"
   google_analytics = "UA-xxxxxx-xx"
 
 [[menu.main]]
-  name = "Home"
-  identifier = "Home"
+  name = "home"
+  identifier = "home"
   url = "/"
   weight = 1
 
 [[menu.socials]]
-  name = "Twitter"
-  identifier = "Twitter"
+  name = "twitter"
+  identifier = "twitter"
   url = "https://www.twitter.com"
   weight = 1
 
 [[menu.socials]]
-  name = "Github"
-  identifier = "Github"
+  name = "github"
+  identifier = "github"
   url = "https://www.github.com"
   weight = 2
 
 [[menu.socials]]
-  name = "RSS"
-  identifier = "RSS"
+  name = "rss"
+  identifier = "rss"
   url = "/index.xml"
   weight = 3
