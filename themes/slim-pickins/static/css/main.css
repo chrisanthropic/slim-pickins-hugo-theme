@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
   grid-area: hd;
   background-color: #8ca0ff;
-  display: block;
+  display: flex;
 }
 nav {
   grid-area: hnav;
@@ -83,6 +83,15 @@ footer {
     "sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd"
     "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
 }
+
+/*******************
+ * Header / Banner *
+ *******************/
+.main-head {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /***********
  * Sidebar *
