@@ -20,19 +20,37 @@ disqusShortname = "xxxx"
   weight = 1
 
 [[menu.socials]]
+  name = "linkedin"
+  identifier = "linkedin"
+  url = "https://www.linkedin.com"
+  weight = 1
+
+[[menu.socials]]
+  name = "tumblr"
+  identifier = "tumblr"
+  url = "https://www.tumblr.com"
+  weight = 2
+
+[[menu.socials]]
+  name = "facebook"
+  identifier = "facebook"
+  url = "https://www.facebook.com"
+  weight = 3
+
+[[menu.socials]]
   name = "twitter"
   identifier = "twitter"
   url = "https://www.twitter.com"
-  weight = 1
+  weight = 4
 
 [[menu.socials]]
   name = "github"
   identifier = "github"
   url = "https://www.github.com"
-  weight = 2
+  weight = 5
 
 [[menu.socials]]
   name = "rss"
   identifier = "rss"
   url = "/index.xml"
-  weight = 3
+  weight = 6

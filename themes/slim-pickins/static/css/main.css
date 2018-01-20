@@ -41,6 +41,7 @@ header {
   grid-area: hd;
   background-color: #8ca0ff;
   display: flex;
+  flex-direction: column;
 }
 nav {
   grid-area: hnav;
