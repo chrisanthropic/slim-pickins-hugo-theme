@@ -154,6 +154,22 @@ label {
   border-bottom: 3px solid #f994db;
 }
 
+.hnav-content ul li.active {
+  background-color: #ffdaf4;
+}
+
+.hnav-content ul li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color .2s ease-in, border-top-color .2s ease-in;
+}
+
+.hnav-content ul li a:hover {
+  color: #fff;
+  border-top-color: #fff;
+}
+
 /* Disable the line that shows up under links if the link is part of the navigation menu */
 .hnav-content ul li a::after {
   display: none;
@@ -360,6 +376,7 @@ input[type=radio]:checked + label::after {
 
   .hnav-content ul li {
     margin: 0 1rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -377,4 +394,7 @@ input[type=radio]:checked + label::after {
     justify-content: flex-end;
   }
 
+  .hnav-content~.hnav-content ul li{
+    padding: 0;
+  }
 }
