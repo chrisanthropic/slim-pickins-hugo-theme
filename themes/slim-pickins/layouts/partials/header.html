@@ -1,1 +1,9 @@
-<header class="main-head"><img src="/images/banner.png"></header>
+<header class="main-head">
+  <a href="{{ .Site.BaseURL }}">
+    {{ if .Page.Params.header }}
+      <img src="/images/{{ .Page.Params.header }}">
+    {{ else }}
+      <img src="/images/{{ .Site.Params.header }}">
+    {{ end }}
+  </a>
+</header>

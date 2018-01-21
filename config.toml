@@ -7,11 +7,7 @@ disqusShortname = "xxxx"
 
 
 [params]
-  twitterName = ""
-  githubName = ""
-  stackOverflowId = "#######"
-  description = "Demo site for a hugo theme"
-  google_analytics = "UA-xxxxxx-xx"
+  header = "banner.png"
 
 [[menu.main]]
   name = "home"

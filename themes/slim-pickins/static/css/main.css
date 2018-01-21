@@ -117,6 +117,10 @@ footer {
   height: auto;
 }
 
+.main-head a:after{
+  background: none;
+}
+
 
 /***********
  * Sidebar *
