@@ -31,17 +31,17 @@ a {
 }
 
 a::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width .3s;
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width .3s;
 }
 
 a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,6 +92,15 @@ footer {
  * Grid templates *
  ******************/
 #index {
+  grid-template-areas: 
+    "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+    "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
+    "main main main main main main main main main main main main"
+    "sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd"
+    "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+}
+
+#single {
   grid-template-areas: 
     "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
     "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
@@ -348,6 +357,13 @@ input[type=radio]:checked + label::after {
   margin: 0;
 }
 
+/*************************
+ * Blog / Post / Content *
+ *************************/
+.content h2 {
+  margin-bottom: 0;
+}
+
 /*********************************************************************
  * Put all main styles above here, only @media-query styles go below *
  *********************************************************************/
@@ -367,6 +383,14 @@ input[type=radio]:checked + label::after {
       ".    .    main main main main main sd   sd   sd   .    ."
       "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
   }
+  #single {
+    grid-template-areas: 
+      "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+      "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav "
+      ".    .    .    main main main main main main .   .    ."
+      "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+  }
+  
   nav {
     display: flex;
     justify-content: center;

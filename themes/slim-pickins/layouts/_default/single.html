@@ -1,36 +1,28 @@
 {{ partial "head.html" . }}
 
-<div>
+<div class="grid" id="single">
+  {{ partial "header.html" . }}
+  {{ partial "horizontal_navigation.html" . }}
 
-    <div>
-        <div>
-            <!-- A wrapper for all the blog posts -->
-            <div>
-                <h1>{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
-                <section>
-                    <header>
-
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+  <main class="content">
+    <article>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <section class="md-cats">
+                <p class="postmeta">{{ .Date.Format "02 January 2006" }}</p>
 
                         <p>
                             {{ with .Params.author }}
                                 By <strong>{{ . }}</strong>
                             {{ end }}
-                            {{ if isset .Params "categories" }}
-                                under 
-                                {{ $baseUrl := .Site.BaseURL }}
-                                {{ range .Params.categories }}<a href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
-                            {{ end }}
                         </p>
-                    </header>
-                    <div>
-                        {{ .Content }}
-                    </div>
+
                 </section>
-            </div>
-            {{ partial "footer.html" . }}
-        </div>
-    </div>
+    {{ .Content }}
+
+</article>
+  </main>
+
+  {{ partial "footer.html" . }}
 </div>
 
 </body>
