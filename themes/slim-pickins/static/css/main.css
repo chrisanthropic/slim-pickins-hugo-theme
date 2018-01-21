@@ -8,13 +8,16 @@ html, body {
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #222;
   background: #fefefe;
+}
+
+body, p {
+  margin: 0;
+  padding: 0;
 }
 
 /********
@@ -158,11 +161,20 @@ label {
   background-color: #ffdaf4;
 }
 
+.hnav-content ul li.active a {
+  color: #fff;
+}
+
 .hnav-content ul li a {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
   transition: color .2s ease-in, border-top-color .2s ease-in;
+}
+
+.hnav-content ul li a:active {
+  color: #fff;
+  border-top-color: #fff;
 }
 
 .hnav-content ul li a:hover {
@@ -322,6 +334,24 @@ input[type=radio]:checked + label::after {
 .icon-linkedin:hover {
   color: #007bb6;
 }
+
+/* Post Metadata */
+.postmeta {
+  font-size: 0.875em;
+}
+
+.md-cats {
+  margin-bottom: 30px;
+}
+
+.md-cats h2 {
+  margin: 0;
+}
+
+/*********************************************************************
+ * Put all main styles above here, only @media-query styles go below *
+ *********************************************************************/
+
 
 /*****************************************
  * Styles for devices larger than 1280px *

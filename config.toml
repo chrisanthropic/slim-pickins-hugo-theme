@@ -20,8 +20,8 @@ disqusShortname = "xxxx"
   weight = 1
 
 [[menu.main]]
-  name = "blog"
-  identifier = "blog"
+  name = "posts"
+  identifier = "posts"
   url = "/posts/"
   weight = 2
 
