@@ -3,8 +3,6 @@ languageCode = "en-us"
 title = "chrisanthropic"
 theme = "slim-pickins"
 Paginate = 10
-disqusShortname = "xxxx"
-
 
 [params]
   header = "banner.png"
