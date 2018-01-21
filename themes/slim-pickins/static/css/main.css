@@ -104,8 +104,8 @@ footer {
   grid-template-areas: 
     "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
     "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
-    "main main main main main main main main main main main main"
     "sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd"
+    "main main main main main main main main main main main main"
     "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
 }
 
@@ -125,6 +125,10 @@ footer {
 /***********
  * Sidebar *
  ***********/ 
+#TableOfContents {
+  background-color: #ffe4e9;
+  color: black;
+}
 
 /*********************
  * Horizontal Navbar *
@@ -391,7 +395,7 @@ input[type=radio]:checked + label::after {
     grid-template-areas: 
       "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
       "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav "
-      ".    .    .    main main main main main main .   .    ."
+      ".    .    main main main main main main sd   sd   .    ."
       "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
   }
   

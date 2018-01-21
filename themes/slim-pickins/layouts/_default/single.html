@@ -20,9 +20,8 @@
     {{ .Content }}
 
 </article>
-
   </main>
-
+    {{ if .Params.toc }}{{ partial "toc-sidebar.html" . }}{{ end }}
   {{ partial "footer.html" . }}
 </div>
 </body>

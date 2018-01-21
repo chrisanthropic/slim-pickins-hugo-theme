@@ -12,9 +12,6 @@
                         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 
                         <p>
-                            {{ with .Params.author }}
-                                By <strong>{{ . }}</strong>
-                            {{ end }}
                             {{ if isset .Params "categories" }}
                                 {{ $baseUrl := .Site.BaseURL }}
                                 {{ range .Params.categories }}<span class="postmeta">categories:</span> <a href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
