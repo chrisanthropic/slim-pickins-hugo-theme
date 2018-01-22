@@ -189,7 +189,11 @@ label {
 }
 
 .hnav-content ul li.active a {
-  color: #fff;
+  color: #000;
+}
+
+.hnav-content ul li.active a:hover {
+  color: #000;
 }
 
 .hnav-content ul li a {
