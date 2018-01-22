@@ -15,7 +15,7 @@ body {
   background: #fefefe;
 }
 
-body, p {
+body, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -45,7 +45,7 @@ a:hover::after {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /***************
@@ -69,8 +69,8 @@ main {
 }
 aside {
   grid-area: sd;
-  margin: 0 10px;
-  padding: 0 10px;
+  margin: 10px;
+  padding: 10px;
 }
 footer {
   grid-area: ft;
@@ -106,6 +106,15 @@ footer {
     "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
     "sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd"
     "main main main main main main main main main main main main"
+    "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+}
+
+#about {
+  grid-template-areas: 
+    "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+    "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
+    "main main main main main main main main main main main main"
+    "sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd   sd"
     "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
 }
 
@@ -369,6 +378,9 @@ input[type=radio]:checked + label::after {
 /*************************
  * Blog / Post / Content *
  *************************/
+.content {
+  margin: 10px;
+}
 .content h2 {
   margin-bottom: 0;
 }
@@ -409,7 +421,13 @@ input[type=radio]:checked + label::after {
       ".    .    main main main main main main sd   sd   .    ."
       "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
   }
-  
+  #about {
+    grid-template-areas: 
+      "hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd   hd"
+      "hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav hnav"
+      ".    .    main main main main main main main main .    .   "
+      "ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft   ft";
+  }
   nav {
     display: flex;
     justify-content: center;
@@ -469,5 +487,15 @@ input[type=radio]:checked + label::after {
 
   .hnav-content~.hnav-content ul li{
     padding: 0;
+  }
+
+  .logo {
+    float: left;
+    padding: 0;
+    margin: 0 2rem;
+  }
+  
+  .content {
+    margin: 20px;
   }
 }
