@@ -150,6 +150,7 @@ label {
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
+  border-bottom: 1px dashed #f994db;
 }
 
 .hnav-content {
@@ -371,6 +372,16 @@ input[type=radio]:checked + label::after {
 .content h2 {
   margin-bottom: 0;
 }
+
+/**************
+ * About Page *
+ **************/
+.logo {
+  border-radius: 200px;
+  max-width: 100%;
+  padding-top: 1em;
+}
+
 
 /*********************************************************************
  * Put all main styles above here, only @media-query styles go below *

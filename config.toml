@@ -19,6 +19,12 @@ Paginate = 10
   url = "/blog/"
   weight = 2
 
+[[menu.main]]
+  name = "about"
+  identifier = "about"
+  url = "/about/"
+  weight = 3
+
 [[menu.socials]]
   name = "linkedin"
   identifier = "linkedin"
