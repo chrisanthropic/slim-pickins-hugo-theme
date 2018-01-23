@@ -5,6 +5,9 @@ theme = "slim-pickins"
 Paginate = 10
 SectionPagesMenu = "main"
 
+[taxonomies]
+  category = "categories"
+
 [params]
   header = "banner.png"
 
