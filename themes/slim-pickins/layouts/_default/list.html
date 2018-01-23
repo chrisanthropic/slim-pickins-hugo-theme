@@ -14,7 +14,7 @@
                         <p>
                             {{ if isset .Params "categories" }}
                                 {{ $baseUrl := .Site.BaseURL }}
-                                {{ range .Params.categories }}<span class="postmeta">categories:</span> <a href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
+                                {{ range .Params.categories }}<span class="postmeta">categories:</span> <a href="{{ $baseUrl }}categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
                             {{ end }}
                         </p>
 

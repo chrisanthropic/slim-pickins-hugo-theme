@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://slim-pickins-hugo-theme.netlify.com/"
 languageCode = "en-us"
 title = "chrisanthropic"
 theme = "slim-pickins"

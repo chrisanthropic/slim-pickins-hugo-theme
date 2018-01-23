@@ -13,8 +13,8 @@
     <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
     <meta property="og:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 
-    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.RSSLink }}" />
 </head>
 <body>
