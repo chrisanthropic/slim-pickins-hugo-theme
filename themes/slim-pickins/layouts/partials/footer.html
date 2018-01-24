@@ -1,1 +1,10 @@
-<footer class="main-footer">The footer</footer>
+<footer class="main-footer">
+  <div>
+    <div class="footer-content">
+        {{ partial "content_left_footer.html" . }}
+    </div>
+    <div class="footer-content">
+        {{ partial "content_right_footer.html" . }}
+    </div>
+  </div>
+</footer>

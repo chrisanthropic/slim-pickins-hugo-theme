@@ -494,8 +494,35 @@ input[type=radio]:checked + label::after {
     padding: 0;
     margin: 0 2rem;
   }
-  
+
   .content {
     margin: 20px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer div {
+    width: 65vw;
+    display: flex;
+    height: 54px;
+  }
+
+  .footer-content {
+	max-height: 0;
+    color: #f994db;
+  }
+
+  .footer-content *{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 54px;
+  }
+
+  .footer-content~.footer-content{
+    justify-content: flex-end;
   }
 }
