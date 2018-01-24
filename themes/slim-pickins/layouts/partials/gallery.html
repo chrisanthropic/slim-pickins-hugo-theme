@@ -4,11 +4,11 @@
     <a href="#{{ .order }}" data-caption-desc="{{ .description }}">
       <img src="{{.image}}" alt="{{.description}}" />
     </a>
+    <a href="#_" class="lightbox" id="{{ .order }}"><img src="{{.image}}" alt="{{.description}}" /></a>
   </article>
 
-<!---
-<aside>
-    <a href="#x" class="lightbox-overlay" id="{{ .order }}"></a>
+<!--
+    <a href="#x" class="lightbox" id="{{ .order }}"></a>
         <div class="lightbox-popup">
           <div class="lightbox-nav-wrap">
                     <div class="lightbox-nav">
@@ -32,6 +32,5 @@
             </div>
           </div>
         </div>
-</aside>
 -->
 {{ end }}
