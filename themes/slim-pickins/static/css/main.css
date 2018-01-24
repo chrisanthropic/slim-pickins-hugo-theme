@@ -84,6 +84,12 @@ footer {
   grid-template-rows: 50px 44px auto auto 50px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
 /******************
  * Grid templates *
  ******************/
