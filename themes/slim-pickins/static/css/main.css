@@ -385,6 +385,16 @@ input[type=radio]:checked + label::after {
   margin-bottom: 0;
 }
 
+/**********
+ * Footer *
+ **********/
+footer {
+  display: flex;
+  justify-content: center;
+  color: #f994db;
+  text-align: center;
+}
+
 /**************
  * About Page *
  **************/
@@ -499,11 +509,6 @@ input[type=radio]:checked + label::after {
     margin: 20px;
   }
 
-  footer {
-    display: flex;
-    justify-content: center;
-  }
-
   footer div {
     width: 65vw;
     display: flex;
@@ -512,7 +517,6 @@ input[type=radio]:checked + label::after {
 
   .footer-content {
 	max-height: 0;
-    color: #f994db;
   }
 
   .footer-content *{
