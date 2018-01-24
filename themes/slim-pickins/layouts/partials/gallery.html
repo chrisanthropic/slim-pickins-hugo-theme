@@ -1,0 +1,7 @@
+{{ range $.Site.Data.covers.arts }}
+					<li>
+						<a href="{{.url}}">
+							<img src="{{.image}}" alt="{{.description}}"/>
+						</a>
+					</li>
+{{ end }}
