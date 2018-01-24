@@ -12,12 +12,6 @@ SectionPagesMenu = "main"
   header = "banner.png"
 
 [[menu.main]]
-  name = "home"
-  identifier = "home"
-  url = "/"
-  weight = 1
-
-[[menu.main]]
   name = "blog"
   identifier = "blog"
   url = "/blog/"
