@@ -1,6 +1,7 @@
 ---
 Title: Gallery
 type: gallery
+layout: single
 menu:
   main:
     identifier: "gallery"
