@@ -44,6 +44,11 @@ a:hover::after {
   width: 100%;
 }
 
+figcaption {
+    font-size: 0.875em;
+    margin-top: 1rem;
+}
+
 /***************
  * Grid Areas  *
  ***************/
@@ -433,6 +438,212 @@ footer {
   transition: all 0.2s linear;
 }
 
+.lightbox-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 8;
+    height: 100%;
+    margin: 0px;
+    transition: opacity .5s;
+}
+
+.lightbox-overlay:target {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.lightbox-popup {
+    width: 95%;
+    max-height: 100%;
+    border: 3px solid #eee;
+    border-radius: 0;
+    display: flex;
+    left: 50%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 0;
+    position: fixed;
+    text-align: justify;
+    top: 40%;
+    visibility: hidden;
+    z-index: 10;
+    max-width: 800px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+}
+
+.lightbox-popup div {
+    margin: 1em 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.lightbox-nav-wrap {
+    position: fixed;
+    top: 0;
+}
+
+.lightbox-image {
+    margin: auto;
+    max-height: 95vh;
+    height: auto;
+}
+
+.lightbox-image-description {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    padding: 10px;
+    background: rgba(254, 254, 254, 0.8);
+    color: black;
+    font-size: 1em;
+    opacity: 1;
+    text-align: center;
+    transition: opacity ease-in-out 0.5s;
+    max-height:100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.lightbox-close-description {
+    color: #f994db;
+    position: fixed;
+    right: 5px;
+    z-index: 999;
+    padding: 3px 3px 10px 10px;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 20px;
+    margin-top: -1rem;
+    font-size: 2rem;
+}
+
+.lightbox-close-description:hover {
+    color: black;
+}
+
+.gallery article img.lightbox-image:hover {
+  transform: none;
+}
+
+.lightbox-overlay:target+.lightbox-popup {
+    background: black;
+    top: 50%;
+    right: 0;
+    opacity: 1;
+    position: absolute;
+    visibility: visible;
+    height: 99%;
+    box-shadow: 0 3px 7px rgba(0,0,0,.25);
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+p:focus {
+	opacity: 0;
+    visibility: invisible;
+    outline: 0;
+}
+
+p:focus ~ .lightbox-image-description {
+	opacity: 0;
+    visibility: invisible;
+    outline: 0;
+}
+
+.lightbox-caption {
+    color: #eee;
+    text-align: center;
+}
+
+.lightbox-nav {
+    float: left;
+    width: 33%;
+}
+
+.lightbox-popup-close {
+    top: 0px;
+    position: fixed;
+    right: 30px;
+    border: none;
+    opacity: 1;
+    margin: 0;
+    width: auto;
+    height: 40px;
+    border-radius: 0;
+    line-height: 40px;
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.lightbox-prev {
+    position: fixed;
+    left: 30px;
+    border: none;
+    opacity: 1;
+    margin: 0;
+    top: -8px;
+    bottom: auto;
+    width: auto;
+    height: 40px;
+    border-radius: 0;
+    line-height: 40px;
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.lightbox-next {
+    position: fixed;
+    left: 48%;
+    width: 30px;
+    right: -50px;
+    border: none;
+    opacity: 1;
+    margin: 0;
+    top: -8px;
+    bottom: auto;
+    height: 40px;
+    border-radius: 0;
+    line-height: 40px;
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a.lightbox-prev, a.lightbox-next, a.lightbox-popup-close {
+    color: #f994db;
+    font-size: 4em;
+    -webkit-font-smoothing: antialiased;
+}
+
+a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited {
+    color: #f994db;
+    font-size: 4em;
+    -webkit-font-smoothing: antialiased;
+}
+
 /*********************************************************************
  * Put all main styles above here, only @media-query styles go below *
  *********************************************************************/
@@ -555,23 +766,6 @@ footer {
     transform: scale(1.05);
     transition: all 0.2s linear
   }
-
-  .footer-content {
-	max-height: 0;
-  }
-
-  .footer-content *{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 54px;
-  }
-
-  .footer-content~.footer-content{
-    justify-content: flex-end;
-  }
-}
-
 
 /* concept borrowed from: http://www.script-tutorials.com/css3-modal-popups */
 
@@ -724,7 +918,18 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
     -webkit-font-smoothing: antialiased;
 }
 
-figcaption {
-    font-size: 0.875em;
-    margin-top: 1rem;
+  .footer-content {
+	max-height: 0;
+  }
+
+  .footer-content *{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 54px;
+  }
+
+  .footer-content~.footer-content{
+    justify-content: flex-end;
+  }
 }
