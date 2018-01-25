@@ -1,6 +1,6 @@
 ---
 name: "covers"
-arts:
+covers:
 - image: "/images/galleries/covers/Thieves-at-Heart.jpg"
   order: 1
   artist: "Sam Wood"
