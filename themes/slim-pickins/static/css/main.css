@@ -573,8 +573,7 @@ footer {
 }
 
 
-/*
-// code taken from: http://www.script-tutorials.com/css3-modal-popups/
+/* concept borrowed from: http://www.script-tutorials.com/css3-modal-popups */
 
 .lightbox-overlay {
     background-color: rgba(0, 0, 0, 0.8);
@@ -589,11 +588,6 @@ footer {
     z-index: 8;
     height: 100%;
     margin: 0px;
-
-    -webkit-transition: opacity .5s;
-    -moz-transition: opacity .5s;
-    -ms-transition: opacity .5s;
-    -o-transition: opacity .5s;
     transition: opacity .5s;
 }
 
@@ -605,7 +599,7 @@ footer {
 }
 
 .lightbox-popup {
-    border: 3px solid $lightbox-border-color;
+    border: 3px solid #eee;
     left: 48%;
     opacity: 0;
     padding: 0;
@@ -616,41 +610,22 @@ footer {
     z-index: 10;
     max-width: 800px;
     max-height: 80vw;
-
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
-
-    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
-    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
     box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
 
 }
 
-.lightbox-popup p, .lightbox-popup div {
-    margin-bottom: 10px;
+.lightbox-popup div {
+    margin: 5em .75em 2em;
 }
 
 .lightbox-overlay:target+.lightbox-popup {
-    background: $lightbox-background-color;
-    top: 50%;
+    background: black;
+    top: 49%;
     opacity: 1;
     visibility: visible;
     margin: 1em;
-}
-
-.lightbox-popup .masonry-panel {
-    margin-top: 70px;
 }
 
 .lightbox-image {
@@ -658,16 +633,18 @@ footer {
     max-width: 100%;
 }
 
+.gallery article img.lightbox-image:hover {
+  transform: none;
+}
 
 .lightbox-image-description {
     position: fixed;
     left: 0;
-    bottom: 80px;
-    width: 100%;
+    bottom: 100px;
     z-index: 99;
     padding: 10px;
-    background: $lightbox-description-background-color;
-    color: $lightbox-description-text-color;
+    background: rgba(254, 254, 254, 0.8);
+    color: black;
     font-size: 1em;
     opacity: 1;
     text-align: center;
@@ -679,14 +656,20 @@ footer {
 }
 
 .lightbox-close-description {
-    color: $lightbox-navigation-color;
+    color: #f994db;
     position: fixed;
-    right: 25px;
+    right: 5px;
     z-index: 999;
     padding: 3px 3px 10px 10px;
     font-size: 24px;
     text-decoration: none;
     line-height: 20px;
+    margin-top: -1rem;
+    font-size: 2rem;
+}
+
+.lightbox-close-description:hover {
+    color: black;
 }
 
 p:focus {
@@ -702,10 +685,9 @@ p:focus ~ .lightbox-image-description {
 }
 
 .lightbox-caption {
-    color: $lightbox-caption-text-color;
+    color: #eee;
+    text-align: center;
 }
-
-////////////////////////////////////////////////////
 
 
 .lightbox-popup-close {
@@ -731,51 +713,18 @@ p:focus ~ .lightbox-image-description {
 }
 
 a.lightbox-prev, a.lightbox-next, a.lightbox-popup-close {
-    color: $lightbox-navigation-color;
+    color: #f994db;
     font-size: 5em;
     -webkit-font-smoothing: antialiased;
 }
 
 a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited {
-    color: $lightbox-navigation-color;
+    color: #f994db;
     font-size: 5em;
     -webkit-font-smoothing: antialiased;
 }
 
-*/
-
-
-/* lightbox */
-.lightbox{
-  display: none;
-  position: fixed;
-  z-index: 999;
-  text-align: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,.9);
+figcaption {
+    font-size: 0.875em;
+    margin-top: 1rem;
 }
-
-.lightbox img{
-  max-width: 100%;
-  max-height: 80%;
-  padding: 4em;
-  border: 1px solid white;
-  background: black;
-  border-radius: 10px;
-  border: 3px solid #fefefe;
-}
-
-a.lightbox img:hover{
-  transform: none;
-}
-
-.lightbox:target{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-}
-
