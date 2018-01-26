@@ -147,7 +147,11 @@ footer {
   background: none;
 }
 
-
+.main-head img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+} 
 /***********
  * Sidebar *
  ***********/ 
@@ -648,7 +652,6 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
 /*********************************************************************
  * Put all main styles above here, only @media-query styles go below *
  *********************************************************************/
-
 
 /*****************************************
  * Styles for devices larger than 1280px *
