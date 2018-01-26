@@ -652,7 +652,57 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
 /*********************************************************************
  * Put all main styles above here, only @media-query styles go below *
  *********************************************************************/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
+  header, section, aside, footer, nav, main, article, figure {
+    display: block;
+  }
+
+  nav {
+    height: 44px;
+  }
+
+  .grid {
+    max-width: 1920px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1 0 auto;
+  }
+
+  .main-head img {
+    width: 100%;
+  }
+
+  .content {
+    width: 60%;
+    float: left;
+    padding-bottom: 60px;
+  }
+
+  .sidebar {
+    width: 30%;
+    float: right;
+  }
+
+  #TableOfContents {
+    background-color: transparent;
+  }
+
+  .main-footer {
+    height: 55px;
+    position:fixed;
+    right:0;
+    left:0;
+    bottom:0;
+    margin-top: -55px;
+    background-color:rgba(0,0,0,0.70);
+  }
+
+  .footer-content {
+    justify-content: center;
+  }
+}
 /*****************************************
  * Styles for devices larger than 1280px *
  *****************************************/ 
