@@ -21,7 +21,10 @@
 
 </article>
   </main>
+  <aside class="side">
     {{ if .Params.toc }}{{ partial "toc-sidebar.html" . }}{{ end }}
+    {{ partial "recent_posts.html" . }}
+  </aside>
   {{ partial "footer.html" . }}
 </div>
 </body>
