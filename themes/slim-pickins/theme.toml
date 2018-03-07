@@ -1,7 +1,7 @@
 name = "Slim Pickins"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
+description = "A minimal mobile theme with CSS grid and no javascript."
 homepage = "https://slim-pickins-hugo-theme.netlify.com"
 tags = []
 features = []
