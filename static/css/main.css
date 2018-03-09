@@ -450,8 +450,39 @@ footer {
 /****************
  * Contact Page *
  ****************/
-label[for=name] {
+label {
   display: block;
+  font-weight: bold;
+  margin-top: .5em;
+}
+
+input[type=text],[type=email]{
+  width: 93%;
+}
+
+input[type=submit]{
+  width: 98%;
+  background-color: #f994db;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.85em 1em;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+input[type=submit]:hover{
+  background-color: #c26fbb;
+}
+
+textarea {
+  width: 98%;
+  height: 5em;
 }
 
 /***********
@@ -839,6 +870,10 @@ a.lightbox-prev:visited, a.lightbox-next:visited, a.lightbox-popup-close:visited
 
   .content {
     margin: 20px;
+  }
+
+  input[type=text],[type=email]{
+    width: 25vw;
   }
 
   footer div {
