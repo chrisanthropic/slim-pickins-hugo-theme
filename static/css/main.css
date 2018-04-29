@@ -434,7 +434,7 @@ ul.pagination {
 }
 
 article img {
-  max-width: 875px;
+  max-width: 100%;
 }
 
 /**********
